@@ -16,10 +16,10 @@ function setup() {
   ellipse(width/2,height/2,100,100);
   imageURL = imageFromCanvas();
   plane.setAttribute('src', imageURL);
-  console.log("SET UP!!!!!!!_________________")
+  console.log("RUNNING");
 }
 
-function draw_() {
+function draw() {
   background(0,0,0);
   x = x > width ? 0 : x + 1;
   fill(random(255),100,100);
