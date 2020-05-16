@@ -14,8 +14,9 @@
   <body>
     <a-scene embedded arjs id="scene">
       <!-- <a-marker type="pattern" preset="custom" url="https://raw.githubusercontent.com/srsergiorodriguez/ar/master/docs/pattern-maker2.patt"> -->
-        <a-plane id="plane" position="0 0.5 0" rotation="50 0 50" scale="0.5 0.5 0.5"></a-plane>
-      <a-marker preset="hiro""></a-marker>
+      <a-marker preset="hiro"">
+        <a-plane id="plane" position="0 -0.5 0.5" rotation="50 0 0" scale="0.5 0.5 0.5"></a-plane>
+      </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
