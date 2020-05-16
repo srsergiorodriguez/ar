@@ -8,7 +8,7 @@ function setup() {
   frameRate(12);
   cnv.id('cnv');
   cnv.parent('#scene');
-  //cnv.hide()
+  cnv.hide()
   colorMode(HSB);
   background(0,0,0);
   fill(100,100,100);
@@ -16,6 +16,7 @@ function setup() {
   ellipse(width/2,height/2,100,100);
   imageURL = imageFromCanvas();
   plane.setAttribute('src', imageURL);
+  console.log("SET UP!!!!!!!_________________")
 }
 
 function draw_() {
