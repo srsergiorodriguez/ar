@@ -8,7 +8,7 @@ function setup() {
   frameRate(12);
   cnv.id('cnv');
   cnv.parent('#scene');
-  cnv.hide()
+  //cnv.hide()
   colorMode(HSB);
   background(0,0,0);
   fill(100,100,100);
