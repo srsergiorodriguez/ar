@@ -2,22 +2,31 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>AR test</title>
-    <style>
-    </style>
-    <script src="p5.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autoPintor</title>
     <script src="aframe.min.js"></script>
     <script src="aframe-ar.js"></script>
-    <!-- <script src="aframe-ar-nft.js"></script> -->
+    <script src="p5.min.js"></script>
+    <script src="classes.js"></script>
+    <script src="helpers.js"></script>
+    <script src="aventura.min.js"></script>
+    <script src="sketch.js"></script>
+    <style>
+      body {
+        padding:0;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <a-scene embedded arjs id="scene">
-      <a-marker type="pattern" preset="custom" url="https://raw.githubusercontent.com/srsergiorodriguez/ar/master/docs/pattern-marker3.patt">
-        <a-plane id="plane" position="0 0 0" rotation="-90 0 0" scale="1 1 1"></a-plane>
+      <a-marker id="marker" emitevents="true" type="pattern" preset="custom" url="pattern-marker3.patt">
+        <a-plane id="plane" position="0 0 0" rotation="-90 0 0" scale="3 3 3"></a-plane>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+    <!-- <a-scene loading-screen id="scene">
+      <a-plane id="plane" position="0 1 -4" rotation="0 0 0" scale="1 1 "></a-plane>
+    </a-scene> -->
   </body>
-  <script src="sketch.js"></script>
 </html>
