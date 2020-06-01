@@ -16,12 +16,13 @@
   <body>
     <a-scene embedded arjs id="scene">
       <a-assets>
-        <video id="video" autoplay preload="auto" autoload="true" loop="true" src="videoautomata.webm"></a-asset-item>
+        <video id="video_automata" autoplay preload="auto" autoload="true" crossorigin loop="true" src="videoautomata.webm"></a-asset-item>
       </a-assets> 
       <a-marker id="marker" emitevents="true" type="pattern" preset="custom" url="pattern-marker3.patt">
-        <a-video src="#video" position="0 0 0" rotation="-90 0 0" scale="3 3 3"></a-plane>
+        <a-video src="#video_automata" position="0 0 0" rotation="-90 0 0" scale="3 3 3" vidhandler></a-plane>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
+    <button onclick="video_automata.play()">Play</button>
   </body>
 </html>
