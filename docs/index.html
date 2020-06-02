@@ -49,8 +49,8 @@
         <video id="video_automata" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="videoautomata.webm"></a-asset-item>
       </a-assets> 
       <a-marker id="marker" emitevents="true" type="pattern" preset="custom" url="pattern-marker3.patt">
-        <!-- <a-plane id="plane" position="0 0 0" rotation="-90 0 0" scale="3 3 3"></a-plane> -->
-        <a-video id="videoplane" src="#video_automata" position="0 0 0" rotation="-90 0 0" scale="5 5 5" vidhandler></a-plane>
+        <a-plane id="plane" position="0 0 0" rotation="-90 0 0" scale="3 3 3"></a-plane>
+        <!-- <a-video id="videoplane" src="#video_automata" position="0 0 0" rotation="-90 0 0" scale="5 5 5" vidhandler></a-plane> -->
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
@@ -63,20 +63,20 @@
     const imgs = [];
     let a = true;
     let t = 0;
-    // function setup() {
-    //   noCanvas();
-    //   frameRate(12);
-    // }
+    function setup() {
+      noCanvas();
+      frameRate(12);
+    }
 
-    // function draw() {
-    //   if (a) {t++;a=t>=119?false:true;}
-    //   else {t--;a=t<=0?true:false}
-    //   $('#plane').setAttribute('src',`/automata_imgs/a${t}.png`);
-    // }
+    function draw() {
+      if (a) {t++;a=t>=119?false:true;}
+      else {t--;a=t<=0?true:false}
+      $('#plane').setAttribute('src',`/automata_imgs/a${t}.png`);
+    }
 
-    // function imageFromCanvas() {
-    //   return $('#cnv').toDataURL('image/png',0.1);
-    // }
+    function imageFromCanvas() {
+      return $('#cnv').toDataURL('image/png',0.1);
+    }
 
     function playvideo() {
       $("#video_automata").play();
