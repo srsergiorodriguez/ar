@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>autoPintor</title>
+    <script src="p5.min.js"></script>
     <script src="aframe.min.js"></script>
     <script src="aframe-ar.js"></script>
     <style>
@@ -15,15 +16,18 @@
 
       #overlay {
         position: absolute;
-        top: 50%;
-        left: 40%;
+        top: 0px;
+        left: 0px;
+        background: black;
+        width: 100%;
+        height: 100%;
       }
 
       #playbtn {
         text-align: center;
         padding: 5px;
         width: 100%;
-        height: 30px;
+        height: 100%;
         border-radius: 0px;
         cursor: pointer;
         background-color: white;
@@ -45,18 +49,38 @@
         <video id="video_automata" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="videoautomata.webm"></a-asset-item>
       </a-assets> 
       <a-marker id="marker" emitevents="true" type="pattern" preset="custom" url="pattern-marker3.patt">
-        <a-video if="videoplane" src="#video_automata" position="0 0 0" rotation="-90 0 0" scale="5 5 5" vidhandler></a-plane>
+        <!-- <a-plane id="plane" position="0 0 0" rotation="-90 0 0" scale="3 3 3"></a-plane> -->
+        <a-video id="videoplane" src="#video_automata" position="0 0 0" rotation="-90 0 0" scale="5 5 5" vidhandler></a-plane>
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
     <div id="overlay">
-      <button id="playbtn" onclick="playvideo()">Haz clic aquí para activar la animación</button>
+      <button id="playbtn" onclick="playvideo()">Instrucciones: apunta con la cámara de tu dispositivo al marcador. Has clic o pulsa aquí para empezar.</button>
     </div>
   </body>
   <script>
+    $ = (query) => document.querySelector(query);
+    const imgs = [];
+    let a = true;
+    let t = 0;
+    // function setup() {
+    //   noCanvas();
+    //   frameRate(12);
+    // }
+
+    // function draw() {
+    //   if (a) {t++;a=t>=119?false:true;}
+    //   else {t--;a=t<=0?true:false}
+    //   $('#plane').setAttribute('src',`/automata_imgs/a${t}.png`);
+    // }
+
+    // function imageFromCanvas() {
+    //   return $('#cnv').toDataURL('image/png',0.1);
+    // }
+
     function playvideo() {
-      document.getElementById("video_automata").play();
-      document.getElementById("overlay").remove();
+      $("#video_automata").play();
+      $("#overlay").remove();
     }
   </script>
 </html>
