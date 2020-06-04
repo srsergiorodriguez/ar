@@ -85,7 +85,6 @@
         ovly.style("cursor","pointer");
         ovly.mouseClicked(()=>{
           for (let i=0;i<frames.length;i++) {
-            console.log(i+1);
             $("#video_automata"+(i+1)).play();
           }
           $("#overlay").remove();
