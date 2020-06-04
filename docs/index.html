@@ -89,9 +89,9 @@
     function draw() {
       for (let i=0;i<frames.length;i++) {
         if(found[i]) {
-          if (a[i]) {t[i]++;a[i]=t[i]>=frames[i]?false:true;}
-          else {t[i]--;a[i]=t<=0?true:false}
-          $('#plane'+(i+1)).setAttribute('src',`https://raw.githubusercontent.com/srsergiorodriguez/ar/master/animaciones/${(i+1)}/a${[i]}.png`);
+          if (a[i]){t[i]++;a[i]=t[i]>=frames[i]?false:true;}
+          else {t[i]--;a[i]=t[i]<=0?true:false}
+          $('#plane'+(i+1)).setAttribute('src',`https://raw.githubusercontent.com/srsergiorodriguez/ar/master/animaciones/${(i+1)}/a${t[i]}.png`);
         }
       }
       // if (a) {t++;a=t>=119?false:true;}
