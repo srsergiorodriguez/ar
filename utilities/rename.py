@@ -7,7 +7,7 @@ def main():
   
   for i in range(len(filenames)):
     print(i+len(filenames)-1)
-    newname = 'Archivo '+str(i+len(filenames)-1).zfill(5)+'.png'
+    newname = 'a'+str(i+len(filenames)-1).zfill(5)+'.png'
     os.rename(filenames[i],newname)
 
 if __name__ == '__main__':
