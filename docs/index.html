@@ -24,7 +24,6 @@
         font-size: 3vw;
         background-color: white;
         text-align: center;
-        cursor: pointer;
       }
     </style>
   </head>
@@ -79,6 +78,7 @@
       setTimeout(()=>{
         select("#overlay_message").html("¡Listo! Pulsa o haz clic para empezar");
         let ovly = select("#overlay");
+        ovly.style("cursor","pointer");
         ovly.mouseClicked(()=>{
           $("#video_automata").play();
           $("#overlay").remove();
