@@ -30,11 +30,15 @@
   <body>
     <a-scene embedded arjs id="scene">
       <a-assets>
-        <video id="video_automata" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="automata2.webm"></a-asset-item>
+        <video id="video_automata1" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="automata1.webm"></a-asset-item>
+        <video id="video_automata2" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="automata2.webm"></a-asset-item>
+        <video id="video_automata3" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="automata3.webm"></a-asset-item>
+        <video id="video_automata4" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="automata4.webm"></a-asset-item>
+        <video id="video_automata5" muted playsinline webkit-playsinline autoplay preload="auto" autoload="true" crossorigin="anonymous" loop="true" src="automata5.webm"></a-asset-item>
       </a-assets> 
       <a-marker id="marker1" emitevents="true" type="pattern" preset="custom" url="https://raw.githubusercontent.com/srsergiorodriguez/ar/master/docs/markers/pattern-marker1.patt">
         <!-- <a-plane id="plane1" position="0 0 0" rotation="-90 0 0" scale="3 3 3"></a-plane> -->
-        <a-video id="videoplane" src="#video_automata" position="0 0 0" rotation="-90 0 0" scale="5 5 5" vidhandler></a-plane>
+        <a-video id="videoplane" src="#video_automata1" position="0 0 0" rotation="-90 0 0" scale="5 5 5" vidhandler></a-plane>
       </a-marker>
 
       <a-marker id="marker2" emitevents="true" type="pattern" preset="custom" url="https://raw.githubusercontent.com/srsergiorodriguez/ar/master/docs/markers/pattern-marker2.patt">
