@@ -84,7 +84,9 @@
         let ovly = select("#overlay");
         ovly.style("cursor","pointer");
         ovly.mouseClicked(()=>{
-          $("#video_automata").play();
+          for (let i=0;i<frames.length;i++) {
+            $("#video_automata"+i).play();
+          }
           $("#overlay").remove();
         });
       },3000);
